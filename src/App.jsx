@@ -73,7 +73,7 @@ function App() {
 
   return (
     <>
-      <Modal open={modalIsOpen}>
+      <Modal open={modalIsOpen} onClose={handleStopRemovePlace}>
         <DeleteConfirmation
           onCancel={handleStopRemovePlace}
           onConfirm={handleRemovePlace}
@@ -81,7 +81,7 @@ function App() {
       </Modal>
 
       <header>
-        <img src={logoImg} alt="Stylized globe" />
+        <img src={logoImg} alt='Stylized globe' />
         <h1>PlacePicker</h1>
         <p>
           Create your personal collection of places you would like to visit or
@@ -96,7 +96,7 @@ function App() {
           onSelectPlace={handleStartRemovePlace}
         />
         <Places
-          title="Available Places"
+          title='Available Places'
           places={availablePlaces}
           fallbackText={"Sorting places by distance..."}
           onSelectPlace={handleSelectPlace}
